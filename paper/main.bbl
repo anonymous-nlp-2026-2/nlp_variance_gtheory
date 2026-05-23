@@ -1,0 +1,474 @@
+\begin{thebibliography}{59}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Alzahrani et~al.(2024)Alzahrani, Alyahya, Alnumay, Alrashed,
+  Alsubaie, Almushaykeh, Mirza, Alotaibi, Altwairesh, Alowisheq, Bari, and
+  Khan}]{alzahrani2024benchmarks}
+Norah Alzahrani, Hisham~Abdullah Alyahya, Yazeed Alnumay, Sultan Alrashed,
+  Shaykhah Alsubaie, Yusef Almushaykeh, Faisal Mirza, Nouf Alotaibi, Nora
+  Altwairesh, Areeb Alowisheq, M~Saiful Bari, and Haidar Khan. 2024.
+\newblock \href {https://arxiv.org/abs/2402.01781} {When benchmarks are
+  targets: Revealing the sensitivity of large language model leaderboards}.
+\newblock In \emph{Proceedings of the Association for Computational Linguistics
+  (ACL)}, pages 13787--13805.
+
+\bibitem[{Bean et~al.(2025)Bean, Kearns, Romanou, Hafner, Mayne, Batzner,
+  Foroutan, Schmitz, Korgul, Batra, Deb, Beharry, Emde, Foster, Gausen,
+  Grandury, Han, Hofmann, Ibrahim, Kim, Kirk, Lin, Liu, Luettgau, Magomere,
+  Rystr{\o}m, Sotnikova, Yang, Zhao, Bibi, Bosselut, Clark, Cohan, Foerster,
+  Gal, Hale, Raji, Summerfield, Torr, Ududec, Rocher, and
+  Mahdi}]{bean2025measuring}
+Andrew~M. Bean, Ryan~Othniel Kearns, Angelika Romanou, Franziska~Sofia Hafner,
+  Harry Mayne, Jan Batzner, Negar Foroutan, Chris Schmitz, Karolina Korgul,
+  Hunar Batra, Oishi Deb, Emma Beharry, Cornelius Emde, Thomas Foster, Anna
+  Gausen, Mar{\'\i}a Grandury, Simeng Han, Valentin Hofmann, Lujain Ibrahim,
+  and 23 others. 2025.
+\newblock \href {https://arxiv.org/abs/2511.04703} {Measuring what matters:
+  Construct validity in large language model benchmarks}.
+\newblock In \emph{Advances in Neural Information Processing Systems 38
+  ({NeurIPS} 2025), Datasets and Benchmarks Track}.
+
+\bibitem[{Biderman et~al.(2024)Biderman, Schoelkopf, Sutawika, Gao, Tow,
+  Abbasi, Aji, Ammanamanchi, Black, Clive, DiPofi, Etxaniz, Fattori, Forde,
+  Foster, Hsu, Jaiswal, Lee, Li, Lovering, Muennighoff, Pavlick, Phang,
+  Skowron, Tan, Tang, Wang, Winata, Yvon, and Zou}]{biderman2024lessons}
+Stella Biderman, Hailey Schoelkopf, Lintang Sutawika, Leo Gao, Jonathan Tow,
+  Baber Abbasi, Alham~Fikri Aji, Pawan~Sasanka Ammanamanchi, Sidney Black,
+  Jordan Clive, Anthony DiPofi, Julen Etxaniz, Benjamin Fattori, Jessica~Zosa
+  Forde, Charles Foster, Jeffrey Hsu, Mimansa Jaiswal, Won~Ik Lee, Haonan Li,
+  and 11 others. 2024.
+\newblock \href {https://arxiv.org/abs/2405.14782} {Lessons from the trenches
+  on reproducible evaluation of language models}.
+\newblock \emph{arXiv preprint arXiv:2405.14782}.
+
+\bibitem[{Blackwell et~al.(2024)Blackwell, Barry, and
+  Cohn}]{blackwell2024towards}
+Robert~E. Blackwell, Jon Barry, and Anthony~G. Cohn. 2024.
+\newblock \href {https://arxiv.org/abs/2410.03492} {Towards reproducible llm
+  evaluation: Quantifying uncertainty in llm benchmark scores}.
+\newblock \emph{arXiv preprint arXiv:2410.03492}.
+
+\bibitem[{Bouthillier et~al.(2021)Bouthillier, Delaunay, Bronzi, Trofimov,
+  Nichyporuk, Szeto, Sepahvand, Raff, Madan, Voleti, Kahou, Michalski, Arbel,
+  Pal, Varoquaux, and Vincent}]{bouthillier2021accounting}
+Xavier Bouthillier, Pierre Delaunay, Mirko Bronzi, Assya Trofimov, Brennan
+  Nichyporuk, Justin Szeto, Nazanin~Mohammadi Sepahvand, Edward Raff, Kshitij
+  Madan, Vikram Voleti, Samira~Ebrahimi Kahou, Vincent Michalski, Tal Arbel,
+  Chris Pal, Ga{\"e}l Varoquaux, and Pascal Vincent. 2021.
+\newblock \href {https://arxiv.org/abs/2103.03098} {Accounting for variance in
+  machine learning benchmarks}.
+\newblock In \emph{Proceedings of Machine Learning and Systems (MLSys)}.
+
+\bibitem[{Brennan(2001)}]{brennan2001generalizability}
+Robert~L. Brennan. 2001.
+\newblock \emph{Generalizability Theory}.
+\newblock Springer.
+
+\bibitem[{Bui et~al.(2025)Bui, Savova, and Wang}]{bui2025seeds}
+Ngoc~Thang Bui, Guergana Savova, and Lijun Wang. 2025.
+\newblock \href {https://aclanthology.org/2025.ijcnlp-short.3/} {Assessing the
+  macro and micro effects of random seeds on fine-tuning large language
+  models}.
+\newblock In \emph{Proceedings of IJCNLP-AACL}.
+
+\bibitem[{Burnell et~al.(2023)Burnell, Schellaert, Burden
+  et~al.}]{burnell2023rethink}
+Ryan Burnell, Wout Schellaert, John Burden, and 1 others. 2023.
+\newblock \href {https://doi.org/10.1126/science.adf6369} {Rethink reporting of
+  evaluation results in {AI}}.
+\newblock \emph{Science}, 380(6641):136--138.
+
+\bibitem[{Camuffo et~al.(2026)Camuffo, Gambardella, Kazemi, Malachowski, and
+  Pandey}]{varannot2026gtheory}
+Arnaldo Camuffo, Alfonso Gambardella, Saeid Kazemi, Jakub Malachowski, and
+  Abhinav Pandey. 2026.
+\newblock \href {https://arxiv.org/abs/2601.02370} {Variance-aware {LLM}
+  annotation for strategy research: Sources, diagnostics, and a protocol for
+  reliable measurement}.
+\newblock \emph{arXiv preprint arXiv:2601.02370}.
+
+\bibitem[{Cardinet et~al.(2010)Cardinet, Johnson, and
+  Pini}]{cardinet2010applying}
+Jean Cardinet, Sandra Johnson, and Gianreto Pini. 2010.
+\newblock \emph{Applying Generalizability Theory Using {EduG}}.
+\newblock Routledge.
+
+\bibitem[{Clauser and Mazor(1998)}]{clauser1998dif}
+Brian~E. Clauser and Kathleen~M. Mazor. 1998.
+\newblock \href {https://doi.org/10.1111/j.1745-3992.1998.tb00619.x} {Using
+  statistical procedures to identify differentially functioning test items}.
+\newblock \emph{Educational Measurement: Issues and Practice}, 17(1):31--44.
+
+\bibitem[{Dehghani et~al.(2021)Dehghani, Tay, Gritsenko, Zhao, Houlsby, Diaz,
+  Metzler, and Vinyals}]{dehghani2021benchmark}
+Mostafa Dehghani, Yi~Tay, Alexey~A. Gritsenko, Zhe Zhao, Neil Houlsby, Fernando
+  Diaz, Donald Metzler, and Oriol Vinyals. 2021.
+\newblock \href {https://arxiv.org/abs/2107.07002} {The benchmark lottery}.
+\newblock \emph{arXiv preprint arXiv:2107.07002}.
+
+\bibitem[{Dodge et~al.(2020)Dodge, Ilharco, Schwartz, Farhadi, Hajishirzi, and
+  Smith}]{dodge2020finetuning}
+Jesse Dodge, Gabriel Ilharco, Roy Schwartz, Ali Farhadi, Hannaneh Hajishirzi,
+  and Noah~A. Smith. 2020.
+\newblock \href {https://arxiv.org/abs/2002.06305} {Fine-tuning pretrained
+  language models: Weight initializations, data orders, and early stopping}.
+\newblock \emph{arXiv preprint arXiv:2002.06305}.
+
+\bibitem[{Efron and Tibshirani(1993)}]{efron1993bootstrap}
+Bradley Efron and Robert~J. Tibshirani. 1993.
+\newblock \emph{An Introduction to the Bootstrap}.
+\newblock Chapman \& Hall, New York.
+
+\bibitem[{Freiesleben(2026)}]{freiesleben2026construct}
+Timo Freiesleben. 2026.
+\newblock \href {https://arxiv.org/abs/2603.15121} {Establishing construct
+  validity in {LLM} capability benchmarks requires nomological networks}.
+\newblock \emph{arXiv preprint arXiv:2603.15121}.
+
+\bibitem[{Gao et~al.(2024)Gao, Tow, Abbasi, Biderman, Black, DiPofi, Foster,
+  Golber, Hsu, Le~Noac'h, Li, McDonell, Muennighoff, Ocqueteau, Phang,
+  Reynolds, Schoelkopf, Skowron, Sutawika, Tang, Thite, Wang, Wang, and
+  Zou}]{gao2024lmeval}
+Leo Gao, Jonathan Tow, Baber Abbasi, Stella Biderman, Sid Black, Anthony
+  DiPofi, Charles Foster, Laurence Golber, Jeffrey Hsu, Alain Le~Noac'h, Haonan
+  Li, Kyle McDonell, Niklas Muennighoff, Chris Ocqueteau, Jason Phang, Laria
+  Reynolds, Hailey Schoelkopf, Aviya Skowron, Lintang Sutawika, and 5 others.
+  2024.
+\newblock \href {https://doi.org/10.5281/zenodo.10256836} {A framework for
+  few-shot language model evaluation}.
+
+\bibitem[{Gema et~al.(2025)Gema, Leang, Hong, Devoto, Mancino, Saxena, He,
+  Zhao, Du, Ghasemi~Madani, Barale, McHardy, Harris, Kaddour, Van~Krieken, and
+  Minervini}]{gema2025mmlu}
+Aryo~Pradipta Gema, Joshua Ong~Jun Leang, Giwon Hong, Alessio Devoto, Alberto
+  Carlo~Maria Mancino, Rohit Saxena, Xuanli He, Yu~Zhao, Xiaotang Du,
+  Mohammad~Reza Ghasemi~Madani, Claire Barale, Robert McHardy, Joshua Harris,
+  Jean Kaddour, Emile Van~Krieken, and Pasquale Minervini. 2025.
+\newblock \href {https://doi.org/10.18653/v1/2025.naacl-long.262} {Are we done
+  with {MMLU}?}
+\newblock In \emph{Proceedings of the Conference of the North American Chapter
+  of the Association for Computational Linguistics (NAACL)}.
+
+\bibitem[{Golchin and Surdeanu(2023)}]{golchin2023contamination}
+Shahriar Golchin and Mihai Surdeanu. 2023.
+\newblock \href {https://arxiv.org/abs/2308.08493} {Time travel in {LLM}s:
+  Tracing data contamination in large language models}.
+\newblock \emph{arXiv preprint arXiv:2308.08493}.
+
+\bibitem[{He and {Thinking Machines Lab}(2025)}]{thinkingmachines2025batch}
+Haiyang He and {Thinking Machines Lab}. 2025.
+\newblock \href {https://doi.org/10.64434/tml.20250910} {Defeating
+  nondeterminism in {LLM} inference}.
+\newblock Thinking Machines Lab: Connectionism.
+
+\bibitem[{Henderson et~al.(2018)Henderson, Islam, Bachman, Pineau, Precup, and
+  Meger}]{henderson2018deep}
+Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup,
+  and David Meger. 2018.
+\newblock \href {https://arxiv.org/abs/1709.06560} {Deep reinforcement learning
+  that matters}.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}.
+
+\bibitem[{Holland and Wainer(1993)}]{holland1993dif}
+Paul~W. Holland and Howard Wainer, editors. 1993.
+\newblock \emph{Differential Item Functioning}.
+\newblock Lawrence Erlbaum Associates, Hillsdale, NJ.
+
+\bibitem[{Hua et~al.(2025)Hua, Tang, Gu, Gu, Wong, and Qin}]{hua2025flaw}
+Angie Hua, Kevin Tang, Chaoqun Gu, Jing Gu, Edmund Wong, and Yilin Qin. 2025.
+\newblock \href {https://aclanthology.org/2025.emnlp-main.1006/} {Flaw or
+  artifact? rethinking prompt sensitivity in evaluating {LLM}s}.
+\newblock In \emph{Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}.
+
+\bibitem[{Jiang and Skorupski(2018)}]{jiang2018bayesian}
+Zhehan Jiang and William Skorupski. 2018.
+\newblock \href {https://doi.org/10.3758/s13428-017-0986-3} {A {Bayesian}
+  approach to estimating variance components within a multivariate
+  generalizability theory framework}.
+\newblock \emph{Behavior Research Methods}, 50.
+
+\bibitem[{Kearns(2026)}]{kearns2026construct}
+Ryan~Othniel Kearns. 2026.
+\newblock \href {https://arxiv.org/abs/2602.15532} {Quantifying construct
+  validity in large language model evaluations}.
+\newblock \emph{arXiv preprint arXiv:2602.15532}.
+
+\bibitem[{Kiela et~al.(2021)Kiela, Bartolo, Nie, Kaushik, Geiger, Wu, Vidgen,
+  Prasad, Singh, Ringshia, Ma, Thrush, Riedel, Waseem, Stenetorp, Jia, Bansal,
+  Potts, and Williams}]{kiela2021dynabench}
+Douwe Kiela, Max Bartolo, Yixin Nie, Divyansh Kaushik, Atticus Geiger,
+  Zhengxuan Wu, Bertie Vidgen, Grusha Prasad, Amanpreet Singh, Pratik Ringshia,
+  Zhiyi Ma, Tristan Thrush, Sebastian Riedel, Zeerak Waseem, Pontus Stenetorp,
+  Robin Jia, Mohit Bansal, Christopher Potts, and Adina Williams. 2021.
+\newblock Dynabench: Rethinking benchmarking in {NLP}.
+\newblock In \emph{Proceedings of the 2021 Conference of the North American
+  Chapter of the Association for Computational Linguistics (NAACL)}.
+
+\bibitem[{Kipnis et~al.(2025)Kipnis, Voudouris, Schulze~Buschoff, and
+  Schulz}]{kipnis2025metabench}
+Alex Kipnis, Konstantinos Voudouris, Luca Schulze~Buschoff, and Eric Schulz.
+  2025.
+\newblock \href {https://arxiv.org/abs/2407.12844} {metabench -- a sparse
+  benchmark of reasoning and knowledge in large language models}.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations}.
+
+\bibitem[{Kunievsky and Evans(2025)}]{kunievsky2025intent}
+Nitzan Kunievsky and James~A. Evans. 2025.
+\newblock \href {https://arxiv.org/abs/2506.16584} {Measuring intent
+  comprehension in {LLM}s: A variance decomposition framework}.
+\newblock \emph{arXiv preprint arXiv:2506.16584}.
+
+\bibitem[{Lalor et~al.(2019)Lalor, Wu, and Yu}]{lalor2019irt}
+John~P. Lalor, Hao Wu, and Hong Yu. 2019.
+\newblock \href {https://aclanthology.org/D19-1434/} {Learning latent
+  parameters without human response patterns: Item response theory with
+  artificial crowds}.
+\newblock In \emph{Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing and International Joint Conference on Natural
+  Language Processing (EMNLP-IJCNLP)}.
+
+\bibitem[{Li(2023)}]{li2023bootstrap}
+Guangming Li. 2023.
+\newblock \href {https://doi.org/10.1371/journal.pone.0288069} {Which method is
+  optimal for estimating variance components and their variability in
+  generalizability theory? {Evidence} from a set of unified rules for bootstrap
+  method}.
+\newblock \emph{PLoS ONE}.
+
+\bibitem[{Li et~al.(2025)Li, Tang, Chen, Cheng, Metoyer, Hua, and
+  Chawla}]{li2025atlas}
+Peiyu Li, Xiuxiu Tang, Si~Chen, Ying Cheng, Ronald Metoyer, Ting Hua, and
+  Nitesh~V. Chawla. 2025.
+\newblock \href {https://arxiv.org/abs/2511.04689} {Adaptive testing for {LLM}
+  evaluation: A psychometric alternative to static benchmarks}.
+\newblock \emph{arXiv preprint arXiv:2511.04689}.
+
+\bibitem[{Liang et~al.(2023)Liang, Bommasani, Lee, Tsipras, Soylu, Yasunaga,
+  Zhang, Narayanan, Wu, Kumar et~al.}]{liang2023helm}
+Percy Liang, Rishi Bommasani, Tony Lee, Dimitris Tsipras, Dilara Soylu,
+  Michihiro Yasunaga, Yian Zhang, Deepak Narayanan, Yuhuai Wu, Ananya Kumar,
+  and 1 others. 2023.
+\newblock Holistic evaluation of language models.
+\newblock \emph{arXiv preprint arXiv:2211.09110}.
+
+\bibitem[{Madaan et~al.(2024)Madaan, Bhatia, Tulio~Ribeiro, and
+  Roth}]{madaan2024quantifying}
+Lovish Madaan, Samarth Bhatia, Marco Tulio~Ribeiro, and Dan Roth. 2024.
+\newblock \href {https://arxiv.org/abs/2406.10229} {Quantifying variance in
+  evaluation benchmarks}.
+\newblock \emph{arXiv preprint arXiv:2406.10229}.
+
+\bibitem[{Magnusson et~al.(2023)Magnusson, Smith, and
+  Dodge}]{magnusson2023reproducibility}
+Ian Magnusson, Noah~A. Smith, and Jesse Dodge. 2023.
+\newblock \href {https://aclanthology.org/2023.findings-acl.809/}
+  {Reproducibility in {NLP}: What have we learned from the checklist?}
+\newblock In \emph{Findings of the Association for Computational Linguistics
+  (ACL)}.
+
+\bibitem[{Maia~Polo et~al.(2024)Maia~Polo, Weber, Choshen, Sun, Xu, and
+  Yurochkin}]{polo2024tinybenchmarks}
+Felipe Maia~Polo, Lucas Weber, Leshem Choshen, Yuekai Sun, Gongjun Xu, and
+  Mikhail Yurochkin. 2024.
+\newblock \href {https://arxiv.org/abs/2402.14992} {{tinyBenchmarks}:
+  Evaluating {LLM}s with fewer examples}.
+\newblock In \emph{Proceedings of the International Conference on Machine
+  Learning (ICML)}.
+
+\bibitem[{Meredith(1993)}]{meredith1993measurement}
+William Meredith. 1993.
+\newblock \href {https://doi.org/10.1007/BF02294825} {Measurement invariance,
+  factor analysis and factorial invariance}.
+\newblock \emph{Psychometrika}, 58(4):525--543.
+
+\bibitem[{Messina and Scotta(2026)}]{messina2026background}
+Alberto Messina and Sara Scotta. 2026.
+\newblock \href {https://arxiv.org/abs/2604.22411} {Introducing background
+  temperature to characterise hidden randomness in large language models}.
+\newblock \emph{arXiv preprint arXiv:2604.22411}.
+
+\bibitem[{Messing(2026)}]{messing2026hidden}
+Solomon Messing. 2026.
+\newblock \href {https://arxiv.org/abs/2604.11581} {Hidden measurement error in
+  {LLM} pipelines distorts annotation, evaluation, and benchmarking}.
+\newblock \emph{arXiv preprint arXiv:2604.11581}.
+
+\bibitem[{Mizrahi et~al.(2024)Mizrahi, Kaplan, Malkin, Dror, Shahaf, and
+  Stanovsky}]{mizrahi2024state}
+Moran Mizrahi, Guy Kaplan, Dan Malkin, Rotem Dror, Dafna Shahaf, and Gabriel
+  Stanovsky. 2024.
+\newblock \href {https://doi.org/10.1162/tacl_a_00681} {State of what art? {A}
+  call for multi-prompt {LLM} evaluation}.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  12:933--949.
+
+\bibitem[{Mushquash and O'Connor(2006)}]{mushquash2006gtheory}
+Cilia Mushquash and Brian~P. O'Connor. 2006.
+\newblock \href {https://doi.org/10.3758/BF03192810} {{SPSS} and {SAS} programs
+  for generalizability theory analyses}.
+\newblock \emph{Behavior Research Methods}.
+
+\bibitem[{Oren et~al.(2024)Oren, Meister, Chatterji, Ladhak, and
+  Hashimoto}]{oren2024proving}
+Yonatan Oren, Nicole Meister, Niladri Chatterji, Faisal Ladhak, and
+  Tatsunori~B. Hashimoto. 2024.
+\newblock \href {https://arxiv.org/abs/2310.17623} {Proving test set
+  contamination in black box language models}.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations (ICLR)}.
+\newblock Outstanding Paper Honorable Mention.
+
+\bibitem[{Perlitz et~al.(2023)Perlitz, Bandel, Gera, Arviv, Ein-Dor, Shnarch,
+  Slonim, Shmueli-Scheuer, and Choshen}]{perlitz2023efficient}
+Yotam Perlitz, Elron Bandel, Ariel Gera, Ofir Arviv, Liat Ein-Dor, Eyal
+  Shnarch, Noam Slonim, Michal Shmueli-Scheuer, and Leshem Choshen. 2023.
+\newblock \href {https://arxiv.org/abs/2308.11696} {Efficient benchmarking of
+  language models}.
+\newblock \emph{arXiv preprint arXiv:2308.11696}.
+
+\bibitem[{Pezeshkpour and Hruschka(2024)}]{pezeshkpour2024ordering}
+Pouya Pezeshkpour and Estevam Hruschka. 2024.
+\newblock \href {https://aclanthology.org/2024.findings-naacl.130/} {Large
+  language models sensitivity to the order of options in multiple-choice
+  questions}.
+\newblock In \emph{Findings of the North American Chapter of the Association
+  for Computational Linguistics (NAACL)}.
+
+\bibitem[{Putnick and Bornstein(2016)}]{putnick2016measurement}
+Diane~L. Putnick and Marc~H. Bornstein. 2016.
+\newblock \href {https://doi.org/10.1016/j.dr.2016.06.004} {Measurement
+  invariance conventions and reporting: {The} state of the art and future
+  directions for psychological research}.
+\newblock \emph{Developmental Review}, 41:71--90.
+
+\bibitem[{Qian et~al.(2026)Qian, Huang, Xu et~al.}]{qian2026benchmark}
+Qi~Qian, Chengsong Huang, Jingwen Xu, and 1 others. 2026.
+\newblock Benchmark$^2$: Systematic evaluation of llm benchmarks.
+\newblock \emph{arXiv preprint arXiv:2601.03986}.
+
+\bibitem[{Rodriguez et~al.(2021)Rodriguez, Barrow, Hoyle, Lalor, Jia, and
+  Boyd-Graber}]{rodriguez2021leaderboards}
+Pedro Rodriguez, Joe Barrow, Alexander Hoyle, John~P. Lalor, Robin Jia, and
+  Jordan Boyd-Graber. 2021.
+\newblock \href {https://aclanthology.org/2021.acl-long.346/} {Evaluation
+  examples are not equally informative: How should that change {NLP}
+  leaderboards?}
+\newblock In \emph{Proceedings of the Association for Computational Linguistics
+  (ACL)}.
+
+\bibitem[{Romanou et~al.(2026)Romanou, Ibrahim, Ross, Shaib, Oktar, Bell,
+  Ovalle, Dodge, Bosselut, Sinha, and Williams}]{brittlebench2026}
+Angelika Romanou, Marah Ibrahim, Candace Ross, Chantal Shaib, Kerem Oktar,
+  Samuel~J. Bell, Anaelia Ovalle, Jesse Dodge, Antoine Bosselut, Koustuv Sinha,
+  and Adina Williams. 2026.
+\newblock \href {https://arxiv.org/abs/2603.13285} {Brittlebench: Quantifying
+  {LLM} robustness via prompt sensitivity}.
+\newblock \emph{arXiv preprint arXiv:2603.13285}.
+
+\bibitem[{Saxon et~al.(2024)Saxon, Holtzman, West, Wang, and
+  Saphra}]{saxon2024metrology}
+Michael Saxon, Ari Holtzman, Peter West, William~Yang Wang, and Naomi Saphra.
+  2024.
+\newblock \href {https://arxiv.org/abs/2407.16711} {Benchmarks as microscopes:
+  A call for model metrology}.
+\newblock In \emph{Proceedings of the Conference on Language Modeling (COLM)}.
+
+\bibitem[{Sclar et~al.(2024)Sclar, Choi, Tsvetkov, and
+  Suhr}]{sclar2024formatting}
+Melanie Sclar, Yejin Choi, Yulia Tsvetkov, and Alane Suhr. 2024.
+\newblock \href {https://arxiv.org/abs/2310.11324} {Quantifying language
+  models' sensitivity to spurious features in prompt design or: How {I} learned
+  to start worrying about prompt formatting}.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations (ICLR)}.
+
+\bibitem[{Shanmugavelu et~al.(2024)Shanmugavelu, Taillefumier, Culver,
+  Hernandez, Coletti, and Sedova}]{shanmugavelu2024floating}
+Sanjif Shanmugavelu, Mathieu Taillefumier, Christopher Culver, Oscar Hernandez,
+  Mark Coletti, and Ada Sedova. 2024.
+\newblock \href {https://doi.org/10.1109/SCW63240.2024.00028} {Impacts of
+  floating-point non-associativity on reproducibility for {HPC} and deep
+  learning applications}.
+\newblock In \emph{SC'24 Workshops (IEEE)}.
+
+\bibitem[{Shavelson and Webb(1991)}]{shavelson1991generalizability}
+Richard~J. Shavelson and Noreen~M. Webb. 1991.
+\newblock \emph{Generalizability Theory: A Primer}.
+\newblock SAGE Publications.
+
+\bibitem[{Shavelson et~al.(1989)Shavelson, Webb, and
+  Rowley}]{shavelson1989gtheory}
+Richard~J. Shavelson, Noreen~M. Webb, and Glenn~L. Rowley. 1989.
+\newblock \href {https://psycnet.apa.org/record/1989-34789-001}
+  {Generalizability theory}.
+\newblock \emph{American Psychologist}.
+
+\bibitem[{Song et~al.(2025)Song, Lee, and Jiao}]{song2025gtheory}
+Dan Song, Won-Chan Lee, and Hong Jiao. 2025.
+\newblock \href {https://arxiv.org/abs/2507.19980} {Exploring {LLM} autoscoring
+  reliability in large-scale writing assessments using generalizability
+  theory}.
+\newblock \emph{arXiv preprint arXiv:2507.19980}.
+
+\bibitem[{Tuerlinckx et~al.(2006)Tuerlinckx, Rijmen, Verbeke, and
+  De~Boeck}]{tuerlinckx2006glmm}
+Francis Tuerlinckx, Frank Rijmen, Geert Verbeke, and Paul De~Boeck. 2006.
+\newblock \href {https://doi.org/10.1348/000711005X79857} {Statistical
+  inference in generalized linear mixed models: A review}.
+\newblock \emph{British Journal of Mathematical and Statistical Psychology}.
+
+\bibitem[{Wang et~al.(2024)Wang, Ma, Zhang, Ni, Chandra, Guo, Ren, Arulraj, He,
+  Jiang, Li, Ku, Wang, Zhuang, Fan, Yue, and Chen}]{wang2024mmlupro}
+Yubo Wang, Xueguang Ma, Ge~Zhang, Yuansheng Ni, Abhranil Chandra, Shiguang Guo,
+  Weiming Ren, Aaran Arulraj, Xuan He, Ziyan Jiang, Tianle Li, Max Ku, Kai
+  Wang, Alex Zhuang, Rongqi Fan, Xiang Yue, and Wenhu Chen. 2024.
+\newblock \href {https://arxiv.org/abs/2406.01574} {{MMLU-Pro}: A more robust
+  and challenging multi-task language understanding benchmark}.
+\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS),
+  Datasets and Benchmarks Track}.
+
+\bibitem[{Webb et~al.(2006)Webb, Shavelson, and Haertel}]{webb2006reliability}
+Noreen~M. Webb, Richard~J. Shavelson, and Edward~H. Haertel. 2006.
+\newblock \href {https://doi.org/10.1016/S0169-7161(06)26004-8} {Reliability
+  coefficients and generalizability theory}.
+\newblock In C.~R. Rao and Sandip Sinharay, editors, \emph{Handbook of
+  Statistics}, volume~26 of \emph{Handbook of Statistics}, pages 81--124.
+  Elsevier.
+
+\bibitem[{Ye et~al.(2025)Ye, Jin, Xie, Zhang, and Song}]{ye2025psychometrics}
+Haoran Ye, Jing Jin, Yuhang Xie, Xin Zhang, and Guojie Song. 2025.
+\newblock \href {https://arxiv.org/abs/2505.08245} {Large language model
+  psychometrics: A systematic review of evaluation, validation, and
+  enhancement}.
+\newblock \emph{arXiv preprint arXiv:2505.08245}.
+
+\bibitem[{Yuan et~al.(2025)Yuan, Li, Ding, Xie, Li, Zhao, Wan, Shi, Hu, and
+  Liu}]{yuan2025layercast}
+Juntao Yuan, Haoyang Li, Xingcheng Ding, Weijie Xie, Yue-Jiao Li, Wentao Zhao,
+  Kaiyan Wan, Jiayi Shi, Xiaolu Hu, and Zhouhan Liu. 2025.
+\newblock \href {https://arxiv.org/abs/2506.09501} {Understanding and
+  mitigating numerical sources of nondeterminism in {LLM} inference}.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}.
+\newblock Oral presentation.
+
+\bibitem[{Zhou et~al.(2026)Zhou, Huang, Zhao, Han, Wang, Chen, Yang, Bao, Dong,
+  Xu, Zhu, Cao, and Zhao}]{zhou2026irt}
+Hao Zhou, Huifeng Huang, Zhe Zhao, Long Han, Haobo Wang, Ke~Chen, Min Yang,
+  Wanli Bao, Jiaxin Dong, Bo~Xu, Conghui Zhu, Hao Cao, and Tiejun Zhao. 2026.
+\newblock \href {https://arxiv.org/abs/2505.15055} {Lost in benchmarks?
+  rethinking large language model benchmarking with item response theory}.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}.
+\newblock Oral presentation.
+
+\bibitem[{Zhu et~al.(2026)Zhu, Hua, Miao, and Zhao}]{zhu2026benchmark}
+Longyuan Zhu, Hairan Hua, Linlin Miao, and Bing Zhao. 2026.
+\newblock \href {https://arxiv.org/abs/2602.11674} {Benchmark health index: A
+  systematic framework for benchmarking the benchmarks of {LLM}s}.
+\newblock \emph{arXiv preprint arXiv:2602.11674}.
+
+\end{thebibliography}

@@ -34,7 +34,7 @@ Throughout this paper, we use the following notation: $p$ = item, $M$ = model, $
 \subsection{Experimental Design: MMLU}
 \label{sec:exp001}
 
-We design a fully crossed factorial experiment (exp-001) that simultaneously varies seven facets of LLM evaluation on MMLU. Table~\ref{tab:design_matrix} summarizes the complete design matrix, and Figure~\ref{fig:design_diagram} illustrates the crossing structure.
+We design a fully crossed factorial experiment (exp-001) that simultaneously varies seven facets of LLM evaluation on MMLU. Table~\ref{tab:design_matrix} summarizes the complete design matrix. Figure~\ref{fig:overview} illustrates the complete pipeline from factorial design through variance decomposition to budget projection.
 
 \paragraph{Facets.} Items ($p$): 200 MMLU questions selected via purposive stratified sampling across 10 of MMLU's 57 subjects (20 per subject, deterministic selection with arbitrarily chosen seed 42). The 10 subjects span four disciplinary domains---STEM: abstract algebra, college physics, high school mathematics, computer security; humanities: world religions, philosophy; social sciences: US foreign policy, international law; professional: professional medicine, clinical knowledge---ensuring that variance estimates are not dominated by a single knowledge domain. Resampling stability (CV = 3.1\%) was evaluated within these 10 subjects; cross-subject generalization remains untested. Models ($M$): eight open-weight 7--9B parameter instruction-tuned models spanning eight architecture families---DeepSeek-7B, Gemma-2-9B, InternLM2.5-7B, Llama-3.1-8B-Instruct, Mistral-7B-v0.3-Instruct, OLMo-2-7B, Qwen3-8B, and Yi-1.5-9B (full identifiers in Appendix~\ref{app:models})---treated as a quasi-random facet (\S\ref{sec:model_facet}). Numerical precision ($\pi$): BF16, FP16, and FP32, all evaluated with \texttt{enforce\_eager=True} for fair comparison across precision levels. Prompt template ($\delta$): six surface perturbations of the evaluation instruction \cite{sclar2024formatting}, varying option layout (lettered vs.\ numbered), instruction wording (direct vs.\ contextual), and answer prompt cue for MC benchmarks; for FF benchmarks, templates vary chain-of-thought elicitation strategy (full template text in Appendix~\ref{app:models}). Random seed ($s$): six fixed values (42, 123, 456, 789, 1024, 2048). Sampling temperature ($\tau$): three levels (0.0, 0.3, 0.7) spanning deterministic to moderately stochastic decoding. Answer ordering ($o$): four permutations of few-shot demonstration examples (for MMLU; structurally inert for other benchmarks, see \S\ref{sec:exp002}) \cite{pezeshkpour2024ordering}.
 
@@ -63,12 +63,6 @@ Ordering ($o$) & Demo permutations & 4 & 4 \\
 \end{tabular}}
 \end{table}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{fig2_design_diagram}
-\caption{Fully crossed G-theory design for LLM evaluation. Each observation is a binary correctness score determined by the crossing of seven facets: item ($p$), model ($M$), precision ($\pi$), prompt ($\delta$), seed ($s$), temperature ($\tau$), and ordering ($o$).}
-\label{fig:design_diagram}
-\end{figure}
 
 \subsection{Cross-Benchmark Extension}
 \label{sec:exp002}

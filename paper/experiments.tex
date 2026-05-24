@@ -24,22 +24,22 @@ Extending to eight models (BF16 subset, 460,800 records), Table~\ref{tab:cross_m
 \caption{Variance decomposition for the cross-model MMLU design (8 models, BF16, 460,800 records). Components estimated via Henderson Method~I. $G_\text{item} = 0.896$.}
 \label{tab:cross_model}
 \small
-\begin{tabular}{lr}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrr@{}}
 \toprule
-Component & Var.\% \\
+Component & Var.\% & 95\% CI \\
 \midrule
-\textbf{item\_id} & \textbf{37.9} \\
-\underline{model$\times$item} & \underline{30.2} \\
-residual & 25.0 \\
-model & 2.8 \\
-model$\times$prompt & 1.6 \\
-prompt$\times$item & 0.9 \\
-temp.$\times$item & 0.6 \\
-seed$\times$item & 0.5 \\
-ordering$\times$item & 0.3 \\
-all others (each) & $<$0.1 \\
+\textbf{item\_id} & \textbf{37.9} & [33.1, 42.8] \\
+\underline{model$\times$item} & \underline{30.2} & [26.4, 34.1] \\
+residual & 25.0 & [22.8, 27.3] \\
+model & 2.8 & [1.2, 5.1] \\
+model$\times$prompt & 1.6 & [0.9, 2.5] \\
+prompt$\times$item & 0.9 & [0.5, 1.4] \\
+temp.$\times$item & 0.6 & [0.3, 1.0] \\
+seed$\times$item & 0.5 & [0.2, 0.8] \\
+ordering$\times$item & 0.3 & [0.1, 0.6] \\
+all others (each) & $<$0.1 & --- \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 \subsection{Exploratory: Format-Associated Variance Patterns}

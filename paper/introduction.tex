@@ -14,13 +14,6 @@ Existing studies examine individual variance sources in isolation. \citet{sclar2
 
 Through a factorial G-theory study \citep{shavelson1991generalizability, brennan2001generalizability} crossing up to seven facets across eight open-weight 7--9B parameter models and five benchmarks (MMLU, ARC-Challenge, HellaSwag, GSM8K, MATH), totaling approximately 2.3 million records, we find that evaluation variance has a stable but format-dependent internal structure. D-study projections show that a recommended 3-prompt $\times$ 3-seed design achieves $G \geq 0.80$ with 178 items (1,602 evaluations per model), a 3.1$\times$ reduction from 552 single-condition items; the full 1,296-condition design further reduces to 55 items as a theoretical ceiling (Figure~\ref{fig:teaser}). Model$\times$item interaction (up to 36\%) indicates that models differ primarily in \emph{which items} they find difficult \citep{pezeshkpour2024ordering, polo2024tinybenchmarks}.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{fig0_teaser_dstudy}
-\caption{D-study projections for MMLU (single-model baseline). A recommended 3-prompt $\times$ 3-seed design reduces the budget from 552 to 178 items for $G \geq 0.80$; the full multi-facet design reduces further to 55 items.}
-\label{fig:teaser}
-\end{figure}
-
 Our contributions:
 \begin{enumerate}
     \item \textbf{Design-dependent reproducibility budgets.} A recommended 3-prompt $\times$ 3-seed design achieves $G \geq 0.80$ with 178 items (1,602 evaluations per model), a 3.1$\times$ reduction over single-condition designs (552 items); the full 1,296-condition design reduces to 55 items (71,280 evaluations). Under binary scoring, BF16 and FP16 require no separate control ($<$0.1\% interaction). IRT item selection and G-theory protocol optimization compose: IRT-selected 116 items yield $G = 0.457$ single-condition but $G = 0.895$ multi-facet (Table~\ref{tab:dstudy}).
@@ -28,3 +21,10 @@ Our contributions:
     \item \textbf{Format-associated variance patterns (exploratory).} MC benchmarks concentrate 68--72\% of variance in item-related components; FF benchmarks disperse to 31--41\% (item-level $d = 1.73$; benchmark-level confirmation limited by sample size). This hypothesis-generating observation warrants confirmation with larger benchmark samples.
 \end{enumerate}
 We release an open-source G-theory pipeline and D-study budget calculator for evaluation design optimization.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig0_teaser_dstudy}
+\caption{D-study projections for MMLU (single-model baseline). A recommended 3-prompt $\times$ 3-seed design reduces the budget from 552 to 178 items for $G \geq 0.80$; the full multi-facet design reduces further to 55 items.}
+\label{fig:teaser}
+\end{figure}

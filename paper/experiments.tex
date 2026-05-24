@@ -17,7 +17,25 @@ For text-exact-match scoring (requiring verbatim string matches), the variance s
 
 \subsection{Cross-Model Variance}
 
-Extending to eight models (BF16 subset, 460,800 records), Table~\ref{tab:cross_model} shows that item difficulty drops from 58.4\% to 37.9\%, while model$\times$item interaction emerges at 30.2\% (up to 36\% across benchmarks, \S\ref{sec:format_conditional}). The model main effect is 3--5\% (MC) and 9--11\% (FF)\footnote{Ranges rounded to nearest integer; exact values are 2.8--5.4\% (MC) and 8.5--10.7\% (FF) per Table~\ref{tab:cross_benchmark}.}, confirming that models differ primarily in \emph{which items} they find difficult rather than in overall ability level (contamination implications in \S\ref{sec:limitations}).
+Extending to eight models (BF16 subset, 460,800 records), Table~\ref{tab:cross_model} shows that item difficulty drops from 58.4\% to 37.9\%, while model$\times$item interaction emerges at 30.2\% (up to 36\% across benchmarks, \S\ref{sec:format_conditional}). The model main effect is 3--5\% (MC) and 9--11\% (FF)\footnote{Ranges rounded to nearest integer; exact values are 2.8--5.4\% (MC) and 8.5--10.7\% (FF) per Table~\ref{tab:cross_benchmark}.}, confirming that models differ primarily in \emph{which items} they find difficult rather than in overall ability level (contamination implications in \S\ref{sec:limitations}). Leave-one-model-out analysis (Table~\ref{tab:lomo_full}) confirms this structure is stable: no single model removal changes $G$ by more than 0.030 across all five benchmarks.
+
+\begin{table}[t]
+\centering
+\caption{LOMO stability across five benchmarks (8 models $\times$ 5 benchmarks = 40 subsets).}
+\label{tab:lomo_full}
+\scriptsize
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Benchmark & $G_\text{full}$ & CV (\%) & Max $|\Delta G|$ & Most impactful \\
+\midrule
+MMLU & 0.896 & 0.49 & 0.019 & InternLM2.5-7B \\
+ARC & 0.892 & 0.94 & 0.026 & Llama-3.1-8B \\
+HellaSwag & 0.872 & 1.09 & 0.028 & Llama-3.1-8B \\
+GSM8K & 0.863 & 1.25 & 0.030 & Gemma-2-9B \\
+MATH & 0.888 & 1.20 & 0.029 & InternLM2.5-7B \\
+\bottomrule
+\end{tabular*}
+\end{table}
 
 \begin{table}[t]
 \centering
@@ -78,6 +96,13 @@ all others & 1.6 & 0.5 & 0.6 & 4.0 & 3.8 \\
 
 \begin{figure}[t]
 \centering
+\includegraphics[width=0.85\columnwidth]{fig_item_heatmap}
+\caption{Item variance share (\%) by model and benchmark. MC benchmarks (left) consistently show higher item variance (46--62\%) than FF benchmarks (right, 18--32\%) across all eight models, confirming the format-associated pattern is not driven by individual models.}
+\label{fig:item_heatmap}
+\end{figure}
+
+\begin{figure}[t]
+\centering
 \includegraphics[width=\columnwidth]{fig1_cross_benchmark}
 \caption{Variance decomposition (Henderson Method~I) across five benchmarks and eight models. Multiple-choice benchmarks share an item-dominated structure; HellaSwag is the exception where model$\times$item (36.0\%) exceeds item difficulty (34.3\%). Free-form benchmarks (GSM8K, MATH) distribute variance across item, model, and interaction components with no single dominant source.}
 \label{fig:cross_benchmark}
@@ -128,9 +153,9 @@ The design choice depends on the evaluation bottleneck: the full 1,296-condition
 
 \paragraph{Projection assumptions.} Cross-model budgets increase to 93 items because model$\times$item interaction enters relative error variance. $G_\text{item}$ is stable across benchmarks (0.863--0.896, CV = 1.4\%; LOMO in Appendix~\ref{app:robustness}). All projections assume the 2024--2025 model generation; the 72B extension (\S\ref{sec:scale_validation}) provides preliminary support.
 
-\subsection{Preliminary Scale Validation}
+\subsection{Scale Validation}
 \label{sec:scale_validation}
 
-Within-family analysis (Qwen2.5 3B/7B/72B on MMLU) and a cross-family check (Llama-3.1-70B-Instruct) confirm qualitatively invariant variance structure: item difficulty dominates at all scales (73--83\%, all single-model $G > 0.95$), with consistent facet ranking across a 24$\times$ parameter range and two architecture families (full results in Appendix~\ref{app:robustness}).
+To test whether the variance structure generalizes beyond 7--9B models, we conduct within-family and cross-family analyses. Qwen2.5-72B-Instruct on MMLU shows item difficulty at 83.2\% ($G_\text{item} = 0.979$), with prompt$\times$item (6.8\%) as the dominant interaction---the same ordering observed at 7B. A three-model crossed design (Qwen2.5 3B/7B/72B) preserves the model$\times$item dominant interaction (38.5\%) and item main effect (35.7\%). Cross-family, Llama-3.1-70B-Instruct yields item difficulty at 74.5\% ($G_\text{item} = 0.957$), confirming that item difficulty dominates across a 24$\times$ parameter range and two architecture families.
 
 \paragraph{Robustness checks.} Three MMLU resamples yield CV = 3.1\%; treating models as fixed increases $G$ by 0.077--0.113, confirming conservative budgets (\S\ref{sec:model_facet}; seven additional analyses in Appendix~\ref{app:robustness}).

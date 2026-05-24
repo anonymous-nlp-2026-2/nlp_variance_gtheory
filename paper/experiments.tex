@@ -45,7 +45,14 @@ all others (each) & $<$0.1 & --- \\
 \subsection{Exploratory: Format-Associated Variance Patterns}
 \label{sec:format_conditional}
 
-We extend to five benchmarks (three MC: MMLU, ARC-Challenge, HellaSwag; two FF: GSM8K, MATH) using exp-002 (8 models $\times$ BF16 $\times$ 2 temperatures $\times$ 6 prompts $\times$ 6 seeds $\times$ 4 orderings $\times$ 200 items). Table~\ref{tab:cross_benchmark} reveals a format-associated pattern: MC benchmarks concentrate item-related variance (item + model$\times$item DIF) at 68--72\%, while FF benchmarks disperse it to 31--41\% ($n = 5$; permutation $p = 0.10$; item-level $d = 1.73$, benchmark-level CI spans zero); we report this as a descriptive observation. This does not extend to item budgets: HellaSwag (MC, 118 items for $G \geq 0.80$) exceeds ARC (98) and MATH (101), showing format alone does not predict evaluation cost (Figure~\ref{fig:cross_benchmark}). The factorial design is not fully symmetric: ordering applies only to MMLU, and prompt templates serve format-specific functions, potentially confounding format comparisons. Per-benchmark details---including HellaSwag and ARC exceptions, FF residual analysis (Table~\ref{tab:ff_residual}), difficulty dispersion as a variance predictor (Figure~\ref{fig:difficulty_scatter}; Table~\ref{tab:subject_gstudy})---are in Appendix~\ref{app:format_details}. All format-associated findings are conditional on binary scoring (\S\ref{sec:binary}).
+We extend to five benchmarks (three MC: MMLU, ARC-Challenge, HellaSwag; two FF: GSM8K, MATH) using exp-002 (8 models $\times$ BF16 $\times$ 2 temperatures $\times$ 6 prompts $\times$ 6 seeds $\times$ 4 orderings $\times$ 200 items). Table~\ref{tab:cross_benchmark} reveals a format-associated pattern: MC benchmarks concentrate item-related variance (item + model$\times$item DIF) at 68--72\%, while FF benchmarks disperse it to 31--41\% ($n = 5$; permutation $p = 0.10$; item-level $d = 1.73$, benchmark-level CI spans zero); we report this as a descriptive observation. This does not extend to item budgets: HellaSwag (MC, 118 items for $G \geq 0.80$) exceeds ARC (98) and MATH (101), showing format alone does not predict evaluation cost (Figure~\ref{fig:cross_benchmark}). The factorial design is not fully symmetric: ordering applies only to MMLU, and prompt templates serve format-specific functions, potentially confounding format comparisons. Figure~\ref{fig:difficulty_scatter} shows that item difficulty heterogeneity ($\text{std}(p_i)$) predicts item variance share across benchmarks ($\rho = 0.82$), with MC benchmarks clustering at higher dispersion and item variance than FF benchmarks. Per-benchmark details---including HellaSwag and ARC exceptions, FF residual analysis (Table~\ref{tab:ff_residual}; Table~\ref{tab:subject_gstudy})---are in Appendix~\ref{app:format_details}. All format-associated findings are conditional on binary scoring (\S\ref{sec:binary}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\columnwidth]{fig4_difficulty_scatter}
+\caption{Item difficulty heterogeneity ($\text{std}(p_i)$) versus \texttt{item\_id} variance share across five benchmarks. MC benchmarks (filled) exhibit higher difficulty dispersion and item variance than FF benchmarks (open). Spearman $\rho = 0.82$.}
+\label{fig:difficulty_scatter}
+\end{figure}
 
 \begin{table}[t]
 \centering
@@ -109,6 +116,13 @@ IRT baseline & --- & 116 & 116 & --- & .457$^\dagger$ \\
 \end{table}
 
 \citet{zhou2026irt}'s IRT-selected 116 items yield $G = 0.457$ under single-condition but $G = 0.895$ under multi-facet conditions, demonstrating that IRT item selection and G-theory protocol optimization are orthogonal and complementary. An internal consistency check using four-model subsets confirms projection stability ($|\Delta G| \leq 0.029$ for MC, $\leq 0.065$ for FF; Table~\ref{tab:forward_pred}); the corresponding ${\sim}$23\% budget increase is consistent across all five benchmarks (Figure~\ref{fig:budget_sensitivity}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\columnwidth]{budget_sensitivity_band}
+\caption{Effect of $|\Delta G| = 0.035$ estimation error on item budgets across five benchmarks. The $\sim$23\% budget increase is consistent across all benchmarks, indicating D-study budgets are robust to estimation uncertainty.}
+\label{fig:budget_sensitivity}
+\end{figure}
 
 The design choice depends on the evaluation bottleneck: the full 1,296-condition design minimizes items (55, 71,280 evaluations/model); the recommended 3$\times$3 design balances cost and reliability (178 items, 1,602 evaluations); single-condition requires 552 items. Cross-model projections show budget ratios of 11--22$\times$ across benchmarks (bootstrap CIs all exceed 10$\times$; Appendix~\ref{app:dstudy_cross}), with multi-facet budgets of 93--128 items (Table~\ref{tab:dstudy_cross}).
 

@@ -128,14 +128,7 @@ Mean & --- & --- & 0.035 & 3.97 \\
 
 \paragraph{Budget sensitivity to estimation error.}
 \label{app:budget_sensitivity}
-Figure~\ref{fig:budget_sensitivity} shows the effect of $|\Delta G| = 0.035$ estimation error on item budgets across all five benchmarks. The percentage increase is remarkably stable (23.0--24.5\%, mean 23.2\%), because the relative budget adjustment $\Delta n / n$ depends on the $G$-formula ratio rather than on absolute variance components. Absolute $\Delta n$ ranges from 13 (ARC) to 67 (GSM8K), scaling with the baseline budget.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.75\columnwidth]{budget_sensitivity_band}
-\caption{Effect of $|\Delta G| = 0.035$ estimation error on item budgets across five benchmarks. The $\sim$23\% budget increase is consistent across all benchmarks, indicating D-study budgets are robust to estimation uncertainty.}
-\label{fig:budget_sensitivity}
-\end{figure}
+The effect of $|\Delta G| = 0.035$ estimation error on item budgets is shown in Figure~\ref{fig:budget_sensitivity} (main text). The percentage increase is remarkably stable (23.0--24.5\%, mean 23.2\%), because the relative budget adjustment $\Delta n / n$ depends on the $G$-formula ratio rather than on absolute variance components. Absolute $\Delta n$ ranges from 13 (ARC) to 67 (GSM8K), scaling with the baseline budget.
 
 \paragraph{Cross-benchmark $G$ stability.}
 \label{app:cross_benchmark_transfer}
@@ -182,14 +175,7 @@ This section supplements the compressed format-associated analysis in \S\ref{sec
 \section{Cross-Benchmark Difficulty Heterogeneity}
 \label{app:difficulty_scatter}
 
-Figure~\ref{fig:difficulty_scatter} plots item difficulty heterogeneity ($\text{std}(p_i)$ across models) against \texttt{item\_id} variance share for all five benchmarks. MC benchmarks cluster at higher dispersion ($0.27$--$0.31$) and higher item variance ($34$--$38\%$), while FF benchmarks occupy the lower-left region ($0.22$--$0.23$, $17$--$24\%$). The cross-benchmark Spearman $\rho = 0.82$ ($p = 0.089$, $n = 5$) is consistent in direction with the within-MMLU correlation ($\rho = 0.806$, $p = 0.005$, $n = 10$ subjects); these are independent analyses at different granularities (benchmarks vs.\ subjects within MMLU), providing multi-scale support for the item difficulty heterogeneity mechanism discussed in \S\ref{sec:format_conditional}.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.75\columnwidth]{fig4_difficulty_scatter}
-\caption{Item difficulty heterogeneity ($\text{std}(p_i)$, computed over available models per benchmark, 6--8 models) versus \texttt{item\_id} variance share (as reported in Table~\ref{tab:cross_benchmark}) across five benchmarks. MC benchmarks (filled) exhibit higher difficulty dispersion and item variance than FF benchmarks (open). Spearman $\rho = 0.82$, $p = 0.089$.}
-\label{fig:difficulty_scatter}
-\end{figure}
+Item difficulty heterogeneity is shown in Figure~\ref{fig:difficulty_scatter} (main text). MC benchmarks cluster at higher dispersion ($0.27$--$0.31$) and higher item variance ($34$--$38\%$), while FF benchmarks occupy the lower-left region ($0.22$--$0.23$, $17$--$24\%$). The cross-benchmark Spearman $\rho = 0.82$ ($p = 0.089$, $n = 5$) is consistent in direction with the within-MMLU correlation ($\rho = 0.806$, $p = 0.005$, $n = 10$ subjects); these are independent analyses at different granularities (benchmarks vs.\ subjects within MMLU), providing multi-scale support for the item difficulty heterogeneity mechanism discussed in \S\ref{sec:format_conditional}.
 
 \section{MMLU Subject-Level Variance Decomposition}
 \label{app:subject_gstudy}

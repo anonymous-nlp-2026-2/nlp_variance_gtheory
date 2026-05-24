@@ -110,7 +110,14 @@ Mean & --- & --- & 0.035 & 3.97 \\
 
 \paragraph{Budget sensitivity to estimation error.}
 \label{app:budget_sensitivity}
-The effect of $|\Delta G| = 0.035$ estimation error on item budgets is shown in Figure~\ref{fig:budget_sensitivity} (main text). The percentage increase is remarkably stable (23.0--24.5\%, mean 23.2\%), because the relative budget adjustment $\Delta n / n$ depends on the $G$-formula ratio rather than on absolute variance components. Absolute $\Delta n$ ranges from 13 (ARC) to 67 (GSM8K), scaling with the baseline budget.
+The effect of $|\Delta G| = 0.035$ estimation error on item budgets is shown in Figure~\ref{fig:budget_sensitivity}. The percentage increase is remarkably stable (23.0--24.5\%, mean 23.2\%), because the relative budget adjustment $\Delta n / n$ depends on the $G$-formula ratio rather than on absolute variance components. Absolute $\Delta n$ ranges from 13 (ARC) to 67 (GSM8K), scaling with the baseline budget.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\columnwidth]{budget_sensitivity_band}
+\caption{Effect of $|\Delta G| = 0.035$ estimation error on item budgets across five benchmarks. The $\sim$23\% budget increase is consistent across all benchmarks, indicating D-study budgets are robust to estimation uncertainty.}
+\label{fig:budget_sensitivity}
+\end{figure}
 
 \paragraph{Cross-benchmark $G$ stability.}
 \label{app:cross_benchmark_transfer}
@@ -222,28 +229,7 @@ MATH & 0.856 & 0.845 & $<$0.001 \\
 \section{Model and Prompt Details}
 \label{app:models}
 
-\paragraph{Models.} Table~\ref{tab:model_ids} lists the eight models with their HuggingFace identifiers.
-
-\begin{table}[h]
-\centering
-\caption{Models used in all experiments.}
-\label{tab:model_ids}
-\scriptsize
-\begin{tabular}{llr}
-\toprule
-Short name & HuggingFace identifier & Params \\
-\midrule
-Llama-3.1-8B & \texttt{meta-llama/Llama-3.1-8B-Instruct} & 8B \\
-Gemma-2-9B & \texttt{google/gemma-2-9b-it} & 9B \\
-Mistral-7B-v0.3 & \texttt{mistralai/Mistral-7B-Instruct-v0.3} & 7B \\
-Qwen3-8B & \texttt{Qwen/Qwen3-8B} & 8B \\
-Yi-1.5-9B & \texttt{01-ai/Yi-1.5-9B-Chat} & 9B \\
-OLMo-2-7B & \texttt{allenai/OLMo-2-1124-7B-Instruct} & 7B \\
-InternLM2.5-7B & \texttt{internlm/internlm2\_5-7b-chat} & 7B \\
-DeepSeek-7B & \texttt{deepseek-ai/deepseek-llm-7b-chat} & 7B \\
-\bottomrule
-\end{tabular}
-\end{table}
+\paragraph{Models.} See Table~\ref{tab:model_ids} (main text) for the eight models. Full HuggingFace identifiers: \texttt{meta-llama/Llama-3.1-8B-Instruct}, \texttt{google/gemma-2-9b-it}, \texttt{mistralai/Mistral-7B-Instruct-v0.3}, \texttt{Qwen/Qwen3-8B}, \texttt{01-ai/Yi-1.5-9B-Chat}, \texttt{allenai/OLMo-2-1124-7B-Instruct}, \texttt{internlm/internlm2\_5-7b-chat}, \texttt{deepseek-ai/deepseek-llm-7b-chat}.
 
 \paragraph{Prompt templates.} Our six prompt templates follow a surface perturbation design inspired by BrittleBench \cite{brittlebench2026}. For multiple-choice benchmarks, templates vary along three dimensions: option layout (lettered vs.\ numbered), instruction wording (direct vs.\ contextual), and answer prompt cue. For free-form benchmarks, templates vary chain-of-thought elicitation strategy. All six templates are semantically equivalent---they request the same task with different surface forms---to isolate formatting effects from content effects. ARC-Challenge and HellaSwag use the same six surface patterns as MMLU with domain-appropriate system instructions; MATH mirrors the GSM8K pattern with \texttt{\textbackslash boxed\{\}} answer formatting.
 

@@ -75,7 +75,28 @@ All findings in this paper are conditioned on binary correctness scoring. This m
 
 \subsection{Model Facet Specification}
 
-Our target universe comprises open-weight, instruction-tuned models in the 7--9B parameter range (eight architecture families); results may not generalize to API-based, base, or $>$9B models. Our eight purposively selected models are treated as a quasi-random facet \cite{meredith1993measurement, putnick2016measurement}. We report $G$ under random-model assumptions, the more conservative specification: across five benchmarks, treating models as fixed yields $G_\text{fixed}$ of 0.951--0.990 (mean 0.975) versus $G_\text{random}$ of 0.863--0.896 (mean 0.882), a consistent increase of 0.077--0.113 (mean 0.093), because model$\times$item interaction (30--36\%) enters the relative error variance under random assumptions. Consequently, our D-study budgets are upper bounds---practitioners will not under-sample regardless of facet classification. The variance decomposition itself (Tables~\ref{tab:cross_model}--\ref{tab:cross_benchmark}) is invariant to this choice. Leave-one-model-out analysis preserves component rankings across all five benchmarks, and Cohen's $\kappa$ pairwise agreement (mean $\kappa = 0.33$--$0.46$) confirms genuine differential item functioning (Appendix~\ref{app:robustness}). Four-model subset consistency checks match the observed eight-model $G$ within mean $|\Delta G| = 0.035$ across all five benchmarks (\S\ref{sec:dstudy_budgets}).
+\begin{table}[t]
+\centering
+\caption{Models used in all experiments. RMS = RMSNorm, LN = LayerNorm.}
+\label{tab:model_ids}
+\scriptsize
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llrl@{}}
+\toprule
+Short name & Family & Params & Norm \\
+\midrule
+Llama-3.1-8B & Llama-3 & 8B & RMS \\
+Gemma-2-9B & Gemma-2 & 9B & RMS \\
+Mistral-7B-v0.3 & Mistral & 7B & RMS \\
+Qwen3-8B & Qwen-3 & 8B & RMS \\
+Yi-1.5-9B & Yi-1.5 & 9B & RMS \\
+OLMo-2-7B & OLMo-2 & 7B & RMS \\
+InternLM2.5-7B & InternLM-2 & 7B & RMS \\
+DeepSeek-7B & DeepSeek & 7B & RMS \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+Our target universe comprises open-weight, instruction-tuned models in the 7--9B parameter range (eight architecture families, Table~\ref{tab:model_ids}); results may not generalize to API-based, base, or $>$9B models. Our eight purposively selected models are treated as a quasi-random facet \cite{meredith1993measurement, putnick2016measurement}. We report $G$ under random-model assumptions, the more conservative specification: across five benchmarks, treating models as fixed yields $G_\text{fixed}$ of 0.951--0.990 (mean 0.975) versus $G_\text{random}$ of 0.863--0.896 (mean 0.882), a consistent increase of 0.077--0.113 (mean 0.093), because model$\times$item interaction (30--36\%) enters the relative error variance under random assumptions. Consequently, our D-study budgets are upper bounds---practitioners will not under-sample regardless of facet classification. The variance decomposition itself (Tables~\ref{tab:cross_model}--\ref{tab:cross_benchmark}) is invariant to this choice. Leave-one-model-out analysis preserves component rankings across all five benchmarks, and Cohen's $\kappa$ pairwise agreement (mean $\kappa = 0.33$--$0.46$) confirms genuine differential item functioning (Appendix~\ref{app:robustness}). Four-model subset consistency checks match the observed eight-model $G$ within mean $|\Delta G| = 0.035$ across all five benchmarks (\S\ref{sec:dstudy_budgets}).
 
 For reference, $G_\text{model}$ (treating models as the object of measurement) under the recommended 3-prompt $\times$ 3-seed design with 200 items averages 0.79 across five benchmarks (range: 0.52 on ARC to 0.93 on HellaSwag). Model ranking reliability depends primarily on model$\times$prompt interaction---ARC (8.0\%) and GSM8K (8.5\%) show lower $G_\text{model}$ because prompt sensitivity reduces model discriminability. $G_\text{item}$ remains the primary metric because item reliability is the direct optimization target for evaluation design; model reliability is a downstream consequence that improves with item count.
 \label{sec:model_facet}

@@ -94,12 +94,12 @@ all others & 1.6 & 0.5 & 0.6 & 4.0 & 3.8 \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=0.85\columnwidth]{fig_item_heatmap}
+\includegraphics[width=0.5\textwidth]{fig_item_heatmap}
 \caption{Item variance share (\%) by model and benchmark. MC benchmarks (left) consistently show higher item variance (46--62\%) than FF benchmarks (right, 18--32\%) across all eight models, confirming the format-associated pattern is not driven by individual models.}
 \label{fig:item_heatmap}
-\end{figure}
+\end{figure*}
 
 \begin{figure}[t]
 \centering
@@ -140,14 +140,7 @@ IRT baseline & --- & 116 & 116 & --- & .457$^\dagger$ \\
 {\scriptsize $^\dagger$\,PSN-IRT 116 items \cite{zhou2026irt} under single-condition: $G = 0.457$. $^\ddagger$\,Same 116 items under multi-facet: $G = 0.895$.}
 \end{table}
 
-\citet{zhou2026irt}'s IRT-selected 116 items yield $G = 0.457$ under single-condition but $G = 0.895$ under multi-facet conditions, demonstrating that IRT item selection and G-theory protocol optimization are orthogonal and complementary. An internal consistency check using four-model subsets confirms projection stability ($|\Delta G| \leq 0.029$ for MC, $\leq 0.065$ for FF; Table~\ref{tab:forward_pred}); the corresponding ${\sim}$23\% budget increase is consistent across all five benchmarks (Figure~\ref{fig:budget_sensitivity}).
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.85\columnwidth]{budget_sensitivity_band}
-\caption{Effect of $|\Delta G| = 0.035$ estimation error on item budgets across five benchmarks. The $\sim$23\% budget increase is consistent across all benchmarks, indicating D-study budgets are robust to estimation uncertainty.}
-\label{fig:budget_sensitivity}
-\end{figure}
+\citet{zhou2026irt}'s IRT-selected 116 items yield $G = 0.457$ under single-condition but $G = 0.895$ under multi-facet conditions, demonstrating that IRT item selection and G-theory protocol optimization are orthogonal and complementary. An internal consistency check using four-model subsets confirms projection stability ($|\Delta G| \leq 0.029$ for MC, $\leq 0.065$ for FF; Table~\ref{tab:forward_pred}); the corresponding ${\sim}$23\% budget increase is consistent across all five benchmarks (Figure~\ref{fig:budget_sensitivity}, Appendix~\ref{app:dstudy_cross}).
 
 The design choice depends on the evaluation bottleneck: the full 1,296-condition design minimizes items (55, 71,280 evaluations/model); the recommended 3$\times$3 design balances cost and reliability (178 items, 1,602 evaluations); single-condition requires 552 items. Cross-model projections show budget ratios of 11--22$\times$ across benchmarks (bootstrap CIs all exceed 10$\times$; Appendix~\ref{app:dstudy_cross}), with multi-facet budgets of 93--128 items (Table~\ref{tab:dstudy_cross}).
 

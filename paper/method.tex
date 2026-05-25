@@ -20,22 +20,25 @@ G(n_p) = \frac{n_p \, \sigma^2_p}{n_p \, \sigma^2_p + \sigma^2_\text{rel}}
 \end{equation}
 enabling independent verification of all budget projections in Table~\ref{tab:dstudy}. This prospective capability distinguishes G-theory from classical ANOVA: rather than only attributing variance post hoc, a D-study enables optimization of evaluation designs \emph{before} data collection \cite{shavelson1989gtheory}. Figure~\ref{fig:dstudy_curves} illustrates the practical impact: multi-facet designs achieve $G \geq 0.80$ with 55 items versus 552 under single-condition protocols. We define \emph{item-related variance} as the sum of the item main effect ($\sigma^2_p$) and the model$\times$item interaction ($\sigma^2_{pM}$). The latter captures differential item functioning (DIF): items whose difficulty ranking changes across models \cite[Ch.~4]{brennan2001generalizability}. Because DIF is operationally an item-level property---it reflects model-specific item difficulty profiles rather than a global model ability shift---aggregating $\sigma^2_p + \sigma^2_{pM}$ provides a unified measure of item-driven variance. We report unbundled components throughout to ensure transparency.\footnote{Notation: $p$ = item, $M$ = model, $\pi$ = precision, $\delta$ = prompt, $s$ = seed, $\tau$ = temperature, $o$ = ordering, $\sigma^2_x$ = variance component for source $x$.}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=0.85\columnwidth]{fig3_dstudy_curves}
+\begin{minipage}[t]{0.52\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{fig3_dstudy_curves}
 \caption{D-study projection: multi-facet designs (blue) reach the $G \geq 0.80$ reliability threshold at 55 items, while single-condition protocols (red) require 552---a 10$\times$ reduction in test length.}
 \label{fig:dstudy_curves}
-\end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.44\textwidth}
+\centering
+\includegraphics[width=0.85\textwidth]{fig_factorial_design}
+\caption{Fully crossed factorial design. Each of six facets is crossed with all 200 items, yielding 259,200 observations per model.}
+\label{fig:factorial}
+\end{minipage}
+\end{figure*}
 
 \subsection{Experimental Design: MMLU}
 \label{sec:exp001}
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.6\columnwidth]{fig_factorial_design}
-\caption{Fully crossed factorial design. Each of six facets is crossed with all 200 items, yielding 259,200 observations per model.}
-\label{fig:factorial}
-\end{figure}
 
 We design a fully crossed factorial experiment (exp-001) that simultaneously varies seven facets of LLM evaluation on MMLU (Figure~\ref{fig:factorial}). Table~\ref{tab:design_matrix} summarizes the complete design matrix.
 

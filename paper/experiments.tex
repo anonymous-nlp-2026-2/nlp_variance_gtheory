@@ -5,8 +5,6 @@ All experiments use open-weight 7--9B parameter models evaluated with vLLM~0.9.2
 \subsection{Single-Model Baseline}
 \label{sec:single_model}
 
-We first establish the variance structure within a single model (Llama-3.1-8B-Instruct) on MMLU to isolate methodological facet contributions before introducing cross-model variation.
-
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig_single_model_variance}
@@ -16,9 +14,9 @@ We first establish the variance structure within a single model (Llama-3.1-8B-In
 
 \paragraph{Design.} The G-study crosses six facets: 200 items $\times$ 3 numerical precisions (BF16, FP16, FP32) $\times$ 6 prompt templates $\times$ 6 random seeds $\times$ 3 temperature levels (0.0, 0.3, 0.7) $\times$ 4 answer orderings, yielding 259,200 binary observations. Variance components are estimated via Henderson Method~I with bootstrap confidence intervals (1,000 resamples).
 
-\paragraph{Results.} Figure~\ref{fig:single_model_var} shows the variance decomposition. Item difficulty dominates at 58.4\%, with residual at 23.1\%. All main facet effects are negligible ($<$1\% each). The interesting structure is in item-conditional interactions (17.2\% total): prompt$\times$item (5.5\%) is largest, indicating items are differentially sensitive to specific facets. The generalizability coefficient $G_\text{item} = 0.936$ (Eq.~\ref{eq:gcoeff}) shows 200 items yield highly reliable rankings; D-study projection (Eq.~\ref{eq:dstudy}) gives $G \geq 0.80$ with 55 items.
+\paragraph{Results.} Item difficulty dominates at 58.4\%, with residual at 23.1\% (Figure~\ref{fig:single_model_var}). All main facet effects are negligible ($<$1\% each); the interesting structure is in item-conditional interactions (17.2\% total), where prompt$\times$item (5.5\%) is largest. The generalizability coefficient $G_\text{item} = 0.936$ (Eq.~\ref{eq:gcoeff}); D-study projection (Eq.~\ref{eq:dstudy}) gives $G \geq 0.80$ with 55 items.
 
-For text-exact-match scoring (requiring verbatim string matches), the variance structure shifts dramatically: temperature dominates at 79.7\% of variance, and $G_\text{item}$ collapses to 0.007. This metric-conditional divergence motivates our exclusive use of binary correctness for the remaining analyses.
+For text-exact-match scoring, temperature dominates at 79.7\% and $G_\text{item}$ collapses to 0.007, motivating our exclusive use of binary correctness.
 
 \subsection{Cross-Model Variance}
 
@@ -82,7 +80,7 @@ all others (each) & $<$0.1 & --- \\
 \subsection{Exploratory: Format-Associated Variance Patterns}
 \label{sec:format_conditional}
 
-We extend to five benchmarks (three MC, two FF) using exp-002. Table~\ref{tab:cross_benchmark} reveals a format-associated pattern: MC benchmarks concentrate item-related variance (item + model$\times$item DIF) at 68--72\%, while FF benchmarks disperse to 31--41\% ($n = 5$; permutation $p = 0.10$; item-level $d = 1.73$, benchmark-level CI spans zero); we report this as a descriptive observation. This does not extend to item budgets: HellaSwag (MC, 118 items) exceeds ARC (98) and MATH (101), showing format alone does not predict cost (Figure~\ref{fig:cross_benchmark}). The design is not fully symmetric: ordering applies only to MMLU, potentially confounding format comparisons. Figure~\ref{fig:difficulty_scatter} shows item difficulty heterogeneity ($\text{std}(p_i)$) predicts item variance share ($\rho = 0.82$; multi-scale support in Appendix~\ref{app:difficulty_scatter}). Per-benchmark details, including residual variance regression (Appendix~\ref{app:ff_residual}) and subject-level decomposition within MMLU (Appendix~\ref{app:subject_gstudy}), are in Appendix~\ref{app:format_details}. All findings are conditional on binary scoring (\S\ref{sec:binary}).
+Table~\ref{tab:cross_benchmark} reveals a format-associated pattern: MC benchmarks concentrate item-related variance (item + model$\times$item) at 68--72\%, while FF benchmarks disperse to 31--41\% ($n = 5$; permutation $p = 0.10$; item-level $d = 1.73$, benchmark-level CI spans zero); we report this as a descriptive observation. This does not extend to item budgets: HellaSwag (MC, 118 items) exceeds ARC (98) and MATH (101), showing format alone does not predict cost (Figure~\ref{fig:cross_benchmark}). Figure~\ref{fig:difficulty_scatter} shows item difficulty heterogeneity ($\text{std}(p_i)$) predicts item variance share ($\rho = 0.82$; Appendix~\ref{app:difficulty_scatter}). Per-benchmark details are in Appendix~\ref{app:format_details}. All findings are conditional on binary scoring (\S\ref{sec:binary}).
 
 \begin{table}[t]
 \centering
@@ -120,9 +118,7 @@ Under binary scoring, BF16 and FP16 are functionally interchangeable ($<$0.1\% i
 \subsection{Design-Dependent Reproducibility Budgets}
 \label{sec:dstudy_budgets}
 
-How many items does a given evaluation design need to achieve a target reliability? We translate variance components into item budgets via D-study projections.
-
-Table~\ref{tab:dstudy} compares evaluation designs at the $G \geq 0.80$ threshold using single-model (Llama-3.1-8B-Instruct) MMLU variance components. The multi-facet design (1,296 conditions per item) achieves $G = 0.936$ at 200 items and requires only 55 items for $G \geq 0.80$. A single-condition design reaches only $G = 0.592$ at 200 items and requires 552 items---a 10.0$\times$ budget ratio stable across subset sizes (CV = 1.9\%).
+Table~\ref{tab:dstudy} compares evaluation designs at the $G \geq 0.80$ threshold using single-model MMLU variance components. The multi-facet design (1,296 conditions) requires only 55 items for $G \geq 0.80$; a single-condition design requires 552 items---a 10.0$\times$ budget ratio (CV = 1.9\%).
 
 \begin{table}[t]
 \centering
@@ -167,9 +163,9 @@ Full multi-facet & 1{,}296 & .936 & 55 \\
 \end{tabular}
 \end{table}
 
-\citet{zhou2026irt}'s IRT-selected 116 items yield $G = 0.457$ under single-condition but $G = 0.895$ under multi-facet conditions, demonstrating that IRT item selection and G-theory protocol optimization are orthogonal and complementary. An internal consistency check using four-model subsets confirms projection stability ($|\Delta G| \leq 0.029$ for MC, $\leq 0.065$ for FF; Table~\ref{tab:forward_pred}); the corresponding ${\sim}$23\% budget increase is consistent across all five benchmarks (Figure~\ref{fig:budget_sensitivity}, Appendix~\ref{app:dstudy_cross}).
+\citet{zhou2026irt}'s IRT-selected 116 items yield $G = 0.457$ under single-condition but $G = 0.895$ under multi-facet conditions, demonstrating that IRT item selection and G-theory protocol optimization are orthogonal and complementary. Four-model subset checks confirm projection stability ($|\Delta G| \leq 0.029$ for MC, $\leq 0.065$ for FF; Table~\ref{tab:forward_pred}; Appendix~\ref{app:dstudy_cross}).
 
-The design choice depends on the evaluation bottleneck: the full 1,296-condition design minimizes items (55); the recommended 3$\times$3 balances cost and reliability (178 items, 1,602 evaluations)---a 2.9$\times$ total-evaluation increase over single-condition (552 evaluations) for a 3.1$\times$ item reduction; single-condition requires 552 items. The efficiency ratio is format-associated: MC benchmarks show 11--13$\times$ (mean 12.0$\times$), while FF benchmarks show 21--22$\times$ (mean 21.5$\times$). Cross-model projections (Table~\ref{tab:dstudy_cross}) show budget ratios all exceeding 10$\times$ (bootstrap CIs), with multi-facet budgets of 93--128 items.
+The recommended 3$\times$3 design balances cost and reliability (178 items, 1,602 evaluations)---a 2.9$\times$ total-evaluation increase for a 3.1$\times$ item reduction. Cross-model projections (Table~\ref{tab:dstudy_cross}) show multi-facet budgets of 93--128 items, with efficiency ratios of 11--13$\times$ (MC) and 21--22$\times$ (FF).
 
 \begin{table}[t]
 \centering
@@ -196,7 +192,7 @@ MATH & 101 & [86, 122] & 233K & 2{,}160 & [1853, 2631] & 21.4 [20.2, 22.5] \\
 }
 \end{table}
 
-\paragraph{Projection assumptions.} Cross-model budgets increase to 93 items because model$\times$item interaction enters relative error variance. $G_\text{item}$ is stable across benchmarks (0.863--0.896, CV = 1.4\%; Appendix~\ref{app:dstudy_cross}). All projections assume the 2024--2025 model generation; \S\ref{sec:scale_validation} provides preliminary support.
+\paragraph{Projection assumptions.} Cross-model budgets increase to 93 items because model$\times$item interaction enters relative error variance. $G_\text{item}$ is stable across benchmarks (0.863--0.896, CV = 1.4\%). All projections assume the 2024--2025 model generation; \S\ref{sec:scale_validation} provides preliminary support.
 
 \subsection{Scale Validation}
 \label{sec:scale_validation}

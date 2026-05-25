@@ -1,4 +1,4 @@
-\section{Conclusion}
+\section{Discussion and Conclusion}
 \label{sec:conclusion}
 
-A 3-prompt $\times$ 3-seed design reduces item requirements from 552 to 178 for $G \geq 0.80$, confirmed across five benchmarks under binary scoring. The variance structure is format-dependent: MC benchmarks concentrate 68--72\% in item-related components while FF benchmarks disperse to 31--41\%, suggesting per-format budget calibration. We recommend multi-facet validation (at minimum 3$\times$3) as standard practice; leaderboard operators should average over prompt and seed conditions.
+The dominant model$\times$item interaction (30--36\%) means model rankings are partly item-dependent, reinforcing calls for item-level reporting \cite{polo2024tinybenchmarks}. The exploratory format-associated pattern---MC benchmarks concentrating 68--72\% in item-related components versus 31--41\% for FF ($p = 0.10$)---suggests per-format budget calibration, pending broader confirmation. A 3-prompt $\times$ 3-seed design reduces items from 552 to 178 ($G \geq 0.80$, MMLU); cross-model projections yield 93--128 items versus 1,078--2,768 single-condition (Table~\ref{tab:dstudy_cross}). We recommend multi-facet validation as standard practice.

@@ -116,31 +116,6 @@ The effect of $|\Delta G| = 0.035$ estimation error on item budgets is shown in 
 \label{app:cross_benchmark_transfer}
 $G_\text{item}$ values cluster in a narrow band across all five benchmarks (0.863--0.896, CV = 1.4\%), despite qualitatively different variance structures: MC benchmarks concentrate 68--72\% in item-related components while GSM8K disperses variance across item (17\%), model (11\%), and interaction (15\%) sources (Table~\ref{tab:cross_benchmark}). This stability implies that D-study budget recommendations calibrated on one benchmark provide reasonable order-of-magnitude guidance for others. However, the 0.033 range in $G_\text{item}$ translates to a 71--128 item range for multi-facet $G \geq 0.80$ (Table~\ref{tab:dstudy_cross}), and the variance compositions differ substantially---benchmark-specific G-studies remain necessary to identify dominant variance sources and optimize condition selection.
 
-\section{Intermediate D-Study Designs}
-\label{app:intermediate_dstudy}
-
-Table~\ref{tab:intermediate_dstudy} shows how reliability improves as evaluation designs increase from single-condition to full multi-facet crossing. The steepest gain occurs at the ``minimal upgrade'' level (2 prompts): $G_{200}$ jumps from 0.592 to 0.692 at 2$\times$ cost. A minimal sufficient design for $G \geq 0.80$ is 3 prompts $\times$ 3 seeds (9 conditions, $G_{200} = 0.818$, $n_{G \geq 0.80} = 178$). Beyond the ``standard'' level (32 conditions), adding orderings provides negligible benefit (ordering$\times$item $<$1\%), confirming that prompt and seed diversity are the primary reliability drivers.
-
-\begin{table}[h]
-\centering
-\caption{Intermediate D-study designs (single-model, MMLU). Designs are ordered by increasing conditions per item; $G_{200}$ and $n_{G \geq 0.80}$ are D-study projections from exp-001 variance components.}
-\label{tab:intermediate_dstudy}
-\scriptsize
-\begin{tabular}{llrrr}
-\toprule
-Design & Conditions & $G_{200}$ & $n_{G{\geq}.80}$ \\
-\midrule
-Single-condition & 1 & .592 & 552 \\
-Minimal upgrade (2p) & 2 & .692 & 357 \\
-Easy upgrade (2p$\times$2s) & 4 & .766 & 245 \\
-Moderate (3p$\times$3s) & 9 & .818 & 178 \\
-Standard (4p$\times$4s$\times$2t) & 32 & .869 & 121 \\
-Enhanced (+4 orderings) & 72 & .871 & 119 \\
-Full multi-facet & 1{,}296 & .936 & 55 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
 \section{Format-Associated Variance: Per-Benchmark Details}
 \label{app:format_details}
 

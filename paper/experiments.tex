@@ -42,12 +42,12 @@ MATH & 0.888 & 1.20 & 0.029 & InternLM2.5-7B \\
 \end{tabular*}
 \end{table}
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.5\textwidth]{fig_item_heatmap}
+\includegraphics[width=\columnwidth]{fig_item_heatmap}
 \caption{Item variance share (\%) by model and benchmark. MC benchmarks (left) show higher item variance (46--62\%) than FF benchmarks (right, 18--32\%) across all eight models.}
 \label{fig:item_heatmap}
-\end{figure*}
+\end{figure}
 
 \begin{table}[t]
 \centering
@@ -143,6 +143,28 @@ IRT baseline & --- & 116 & 116 & --- & .457$^\dagger$ \\
 
 \vspace{2pt}
 {\scriptsize $^\dagger$\,PSN-IRT 116 items \cite{zhou2026irt} under single-condition: $G = 0.457$. $^\ddagger$\,Same 116 items under multi-facet: $G = 0.895$.}
+\end{table}
+
+The cost--reliability tradeoff across intermediate designs (Table~\ref{tab:intermediate_dstudy}) reveals that the steepest gain occurs at the minimal upgrade level (2 prompts): $G_{200}$ jumps from 0.592 to 0.692 at 2$\times$ cost. A minimal sufficient design for $G \geq 0.80$ is 3 prompts $\times$ 3 seeds (9 conditions, $n_{G \geq 0.80} = 178$). Beyond 32 conditions, adding orderings provides negligible benefit (ordering$\times$item $<$1\%), confirming that prompt and seed diversity are the primary reliability drivers.
+
+\begin{table}[t]
+\centering
+\caption{Intermediate D-study designs ordered by increasing conditions per item. $G_{200}$ and $n_{G \geq 0.80}$ are D-study projections from exp-001 variance components.}
+\label{tab:intermediate_dstudy}
+\scriptsize
+\begin{tabular}{llrrr}
+\toprule
+Design & Conditions & $G_{200}$ & $n_{G{\geq}.80}$ \\
+\midrule
+Single-condition & 1 & .592 & 552 \\
+Minimal upgrade (2p) & 2 & .692 & 357 \\
+Easy upgrade (2p$\times$2s) & 4 & .766 & 245 \\
+Moderate (3p$\times$3s) & 9 & .818 & 178 \\
+Standard (4p$\times$4s$\times$2t) & 32 & .869 & 121 \\
+Enhanced (+4 orderings) & 72 & .871 & 119 \\
+Full multi-facet & 1{,}296 & .936 & 55 \\
+\bottomrule
+\end{tabular}
 \end{table}
 
 \citet{zhou2026irt}'s IRT-selected 116 items yield $G = 0.457$ under single-condition but $G = 0.895$ under multi-facet conditions, demonstrating that IRT item selection and G-theory protocol optimization are orthogonal and complementary. An internal consistency check using four-model subsets confirms projection stability ($|\Delta G| \leq 0.029$ for MC, $\leq 0.065$ for FF; Table~\ref{tab:forward_pred}); the corresponding ${\sim}$23\% budget increase is consistent across all five benchmarks (Figure~\ref{fig:budget_sensitivity}).

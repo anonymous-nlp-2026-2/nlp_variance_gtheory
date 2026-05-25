@@ -42,6 +42,13 @@ MATH & 0.888 & 1.20 & 0.029 & InternLM2.5-7B \\
 \end{tabular*}
 \end{table}
 
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.5\textwidth]{fig_item_heatmap}
+\caption{Item variance share (\%) by model and benchmark. MC benchmarks (left) show higher item variance (46--62\%) than FF benchmarks (right, 18--32\%) across all eight models.}
+\label{fig:item_heatmap}
+\end{figure*}
+
 \begin{table}[t]
 \centering
 \caption{Variance decomposition for the cross-model MMLU design (8 models, BF16, 460,800 records). Components estimated via Henderson Method~I. $G_\text{item} = 0.896$.}
@@ -65,17 +72,17 @@ all others (each) & $<$0.1 & --- \\
 \end{tabular*}
 \end{table}
 
-\subsection{Exploratory: Format-Associated Variance Patterns}
-\label{sec:format_conditional}
-
-We extend to five benchmarks (three MC, two FF) using exp-002. Table~\ref{tab:cross_benchmark} reveals a format-associated pattern: MC benchmarks concentrate item-related variance (item + model$\times$item DIF) at 68--72\%, while FF benchmarks disperse to 31--41\% ($n = 5$; permutation $p = 0.10$; item-level $d = 1.73$, benchmark-level CI spans zero); we report this as a descriptive observation. This does not extend to item budgets: HellaSwag (MC, 118 items) exceeds ARC (98) and MATH (101), showing format alone does not predict cost (Figure~\ref{fig:cross_benchmark}). The design is not fully symmetric: ordering applies only to MMLU, potentially confounding format comparisons. Figure~\ref{fig:difficulty_scatter} shows item difficulty heterogeneity ($\text{std}(p_i)$) predicts item variance share ($\rho = 0.82$). Per-benchmark details are in Appendix~\ref{app:format_details}. All findings are conditional on binary scoring (\S\ref{sec:binary}).
-
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.85\columnwidth]{fig4_difficulty_scatter}
 \caption{Item difficulty heterogeneity ($\text{std}(p_i)$) versus \texttt{item\_id} variance share across five benchmarks. MC benchmarks (filled) exhibit higher difficulty dispersion and item variance than FF benchmarks (open). Spearman $\rho = 0.82$.}
 \label{fig:difficulty_scatter}
 \end{figure}
+
+\subsection{Exploratory: Format-Associated Variance Patterns}
+\label{sec:format_conditional}
+
+We extend to five benchmarks (three MC, two FF) using exp-002. Table~\ref{tab:cross_benchmark} reveals a format-associated pattern: MC benchmarks concentrate item-related variance (item + model$\times$item DIF) at 68--72\%, while FF benchmarks disperse to 31--41\% ($n = 5$; permutation $p = 0.10$; item-level $d = 1.73$, benchmark-level CI spans zero); we report this as a descriptive observation. This does not extend to item budgets: HellaSwag (MC, 118 items) exceeds ARC (98) and MATH (101), showing format alone does not predict cost (Figure~\ref{fig:cross_benchmark}). The design is not fully symmetric: ordering applies only to MMLU, potentially confounding format comparisons. Figure~\ref{fig:difficulty_scatter} shows item difficulty heterogeneity ($\text{std}(p_i)$) predicts item variance share ($\rho = 0.82$). Per-benchmark details are in Appendix~\ref{app:format_details}. All findings are conditional on binary scoring (\S\ref{sec:binary}).
 
 \begin{table}[t]
 \centering
@@ -98,13 +105,6 @@ all others & 1.6 & 0.5 & 0.6 & 4.0 & 3.8 \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.5\textwidth]{fig_item_heatmap}
-\caption{Item variance share (\%) by model and benchmark. MC benchmarks (left) consistently show higher item variance (46--62\%) than FF benchmarks (right, 18--32\%) across all eight models, confirming the format-associated pattern is not driven by individual models.}
-\label{fig:item_heatmap}
-\end{figure*}
 
 \begin{figure}[t]
 \centering

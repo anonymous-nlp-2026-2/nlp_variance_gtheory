@@ -1,7 +1,7 @@
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig_overview_pipeline}
-\caption{Overview of the G-theory evaluation pipeline. A factorial design crossing seven facets across eight models and five benchmarks produces 2.3M binary records. G-study variance decomposition via Henderson Method~I reveals that model$\times$item interaction accounts for up to 36\% of variance. D-study projections translate variance components into design-dependent item budgets: a 3-prompt $\times$ 3-seed design achieves $G \geq 0.80$ with 178 items (3.1$\times$ reduction). Two contributions emerge: reproducibility budgets (C1) and format-associated variance patterns (C2).}
+\caption{Overview of the G-theory evaluation pipeline. A factorial design crossing seven facets across eight models and five benchmarks produces 2.3M binary records. G-study variance decomposition via Henderson Method~I reveals that model$\times$item interaction accounts for up to 36\% of variance. D-study projections translate variance components into design-dependent item budgets: a 3-prompt $\times$ 3-seed design achieves $G \geq 0.80$ with 178 items (3.1$\times$ reduction). Three contributions emerge: reproducibility budgets (C1), dominant model$\times$item interaction (C2), and format-associated variance patterns (C3).}
 \label{fig:overview}
 \end{figure*}
 
@@ -17,6 +17,8 @@ We address these gaps with a G-theory study \citep{shavelson1991generalizability
 Our contributions:
 \begin{enumerate}
     \item \textbf{Design-dependent reproducibility budgets.} Multi-facet designs that vary prompts and seeds require dramatically fewer items for reliable measurement. A 3-prompt $\times$ 3-seed design reduces item requirements by 3.1$\times$ on MMLU; cross-benchmark projections yield multi-facet budgets of 93--128 items versus 1,078--2,768 single-condition (Table~\ref{tab:dstudy_cross}). IRT item selection and G-theory protocol optimization are orthogonal and complementary (Table~\ref{tab:dstudy}).
+
+    \item \textbf{Dominant model$\times$item interaction.} Across all five benchmarks, model$\times$item interaction accounts for 30--36\% of total variance---an order of magnitude larger than the model main effect (3--11\%). Models differ primarily in \emph{which items} they find difficult rather than in overall ability. This structure is stable under leave-one-model-out analysis (CV $\leq$ 1.25\%) and independently confirmed by fair-to-moderate inter-model agreement (Cohen's $\kappa = 0.33$--$0.46$).
 
     \item \textbf{Format-associated variance patterns (exploratory).} Item-related variance concentrates in multiple-choice benchmarks (68--72\%) and disperses in free-form benchmarks (31--41\%), driven by item difficulty heterogeneity ($\rho = 0.82$ within MMLU subjects). This exploratory observation ($n = 5$ benchmarks, $p = 0.10$) warrants confirmation with broader benchmark samples.
 \end{enumerate}

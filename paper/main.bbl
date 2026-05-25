@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Bouthillier et~al.(2021)Bouthillier, Delaunay, Bronzi, Trofimov,
@@ -30,13 +30,6 @@ Brian~E. Clauser and Kathleen~M. Mazor. 1998.
   statistical procedures to identify differentially functioning test items}.
 \newblock \emph{Educational Measurement: Issues and Practice}, 17(1):31--44.
 
-\bibitem[{Dehghani et~al.(2021)Dehghani, Tay, Gritsenko, Zhao, Houlsby, Diaz,
-  Metzler, and Vinyals}]{dehghani2021benchmark}
-Mostafa Dehghani, Yi~Tay, Alexey~A. Gritsenko, Zhe Zhao, Neil Houlsby, Fernando
-  Diaz, Donald Metzler, and Oriol Vinyals. 2021.
-\newblock \href {https://arxiv.org/abs/2107.07002} {The benchmark lottery}.
-\newblock \emph{arXiv preprint arXiv:2107.07002}.
-
 \bibitem[{Dodge et~al.(2020)Dodge, Ilharco, Schwartz, Farhadi, Hajishirzi, and
   Smith}]{dodge2020finetuning}
 Jesse Dodge, Gabriel Ilharco, Roy Schwartz, Ali Farhadi, Hannaneh Hajishirzi,
@@ -67,15 +60,6 @@ Haiyang He and {Thinking Machines Lab}. 2025.
 \newblock \href {https://doi.org/10.64434/tml.20250910} {Defeating
   nondeterminism in {LLM} inference}.
 \newblock Thinking Machines Lab: Connectionism.
-
-\bibitem[{Henderson et~al.(2018)Henderson, Islam, Bachman, Pineau, Precup, and
-  Meger}]{henderson2018deep}
-Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup,
-  and David Meger. 2018.
-\newblock \href {https://arxiv.org/abs/1709.06560} {Deep reinforcement learning
-  that matters}.
-\newblock In \emph{Proceedings of the AAAI Conference on Artificial
-  Intelligence}.
 
 \bibitem[{Holland and Wainer(1993)}]{holland1993dif}
 Paul~W. Holland and Howard Wainer, editors. 1993.

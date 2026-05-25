@@ -82,7 +82,7 @@ all others (each) & $<$0.1 & --- \\
 \subsection{Exploratory: Format-Associated Variance Patterns}
 \label{sec:format_conditional}
 
-We extend to five benchmarks (three MC, two FF) using exp-002. Table~\ref{tab:cross_benchmark} reveals a format-associated pattern: MC benchmarks concentrate item-related variance (item + model$\times$item DIF) at 68--72\%, while FF benchmarks disperse to 31--41\% ($n = 5$; permutation $p = 0.10$; item-level $d = 1.73$, benchmark-level CI spans zero); we report this as a descriptive observation. This does not extend to item budgets: HellaSwag (MC, 118 items) exceeds ARC (98) and MATH (101), showing format alone does not predict cost (Figure~\ref{fig:cross_benchmark}). The design is not fully symmetric: ordering applies only to MMLU, potentially confounding format comparisons. Figure~\ref{fig:difficulty_scatter} shows item difficulty heterogeneity ($\text{std}(p_i)$) predicts item variance share ($\rho = 0.82$). Per-benchmark details are in Appendix~\ref{app:format_details}. All findings are conditional on binary scoring (\S\ref{sec:binary}).
+We extend to five benchmarks (three MC, two FF) using exp-002. Table~\ref{tab:cross_benchmark} reveals a format-associated pattern: MC benchmarks concentrate item-related variance (item + model$\times$item DIF) at 68--72\%, while FF benchmarks disperse to 31--41\% ($n = 5$; permutation $p = 0.10$; item-level $d = 1.73$, benchmark-level CI spans zero); we report this as a descriptive observation. This does not extend to item budgets: HellaSwag (MC, 118 items) exceeds ARC (98) and MATH (101), showing format alone does not predict cost (Figure~\ref{fig:cross_benchmark}). The design is not fully symmetric: ordering applies only to MMLU, potentially confounding format comparisons. Figure~\ref{fig:difficulty_scatter} shows item difficulty heterogeneity ($\text{std}(p_i)$) predicts item variance share ($\rho = 0.82$; multi-scale support in Appendix~\ref{app:difficulty_scatter}). Per-benchmark details, including residual variance regression (Appendix~\ref{app:ff_residual}) and subject-level decomposition within MMLU (Appendix~\ref{app:subject_gstudy}), are in Appendix~\ref{app:format_details}. All findings are conditional on binary scoring (\S\ref{sec:binary}).
 
 \begin{table}[t]
 \centering
@@ -196,7 +196,7 @@ MATH & 101 & [86, 122] & 233K & 2{,}160 & [1853, 2631] & 21.4 [20.2, 22.5] \\
 }
 \end{table}
 
-\paragraph{Projection assumptions.} Cross-model budgets increase to 93 items because model$\times$item interaction enters relative error variance. $G_\text{item}$ is stable across benchmarks (0.863--0.896, CV = 1.4\%; Appendix~\ref{app:robustness}). All projections assume the 2024--2025 model generation; \S\ref{sec:scale_validation} provides preliminary support.
+\paragraph{Projection assumptions.} Cross-model budgets increase to 93 items because model$\times$item interaction enters relative error variance. $G_\text{item}$ is stable across benchmarks (0.863--0.896, CV = 1.4\%; Appendix~\ref{app:dstudy_cross}). All projections assume the 2024--2025 model generation; \S\ref{sec:scale_validation} provides preliminary support.
 
 \subsection{Scale Validation}
 \label{sec:scale_validation}

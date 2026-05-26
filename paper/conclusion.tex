@@ -1,10 +1,4 @@
-\section{Discussion and Conclusion}
+\section{Conclusion}
 \label{sec:conclusion}
 
-The dominant model$\times$item interaction (30--36\%) reveals that model rankings are partly item-dependent: models disagree on which items are difficult, not merely on overall ability. We echo calls for item-level reporting \cite{polo2024tinybenchmarks} and further recommend that benchmark developers release item-level metadata to support such analyses.
-
-The exploratory format-associated pattern---MC benchmarks concentrating 68--72\% in item-related components versus 31--41\% for FF ($p = 0.10$)---suggests that evaluation reliability depends on response format. Item difficulty heterogeneity ($\rho = 0.82$) provides a candidate mechanism, with MC items concentrating variance in the item facet while FF items distribute it across items, models, and prompts. If confirmed with broader benchmark samples, item budgets should be calibrated per format rather than universally.
-
-A 3-prompt $\times$ 3-seed design reduces items from 552 to 178 for $G \geq 0.80$ on MMLU; cross-model projections yield 93--128 items versus 1,078--2,768 single-condition (Table~\ref{tab:dstudy_cross}). Since G-theory protocol optimization and IRT item selection are orthogonal, combining both could further reduce evaluation costs.
-
-We recommend three practices for LLM evaluation: (1)~adopt multi-facet designs (minimally 3 prompts $\times$ 3 seeds) for published results; (2)~report item-level accuracy to expose model$\times$item interaction; and (3)~calibrate item budgets to benchmark format. We release an open-source G-theory pipeline and D-study budget calculator to facilitate adoption.
+Item difficulty is the largest variance component in LLM evaluation (34--38\% in MC), and the model$\times$item interaction is the second largest (30--36\% in MC, 15--17\% in FF), exceeding all manipulated design factors by an order of magnitude---models disagree on which items are difficult, not in overall ability. Multi-facet designs absorb this interaction: a 3-prompt $\times$ 3-seed protocol achieves $G \geq 0.80$ with 178 items versus 552 single-condition (3.1$\times$ reduction; cross-benchmark: 93--128 items). An exploratory format comparison ($n = 5$) suggests item-related variance concentrates in MC (68--72\%) but disperses in FF (31--41\%), motivating per-format calibration. We recommend adopting multi-facet designs, reporting item-level accuracy, and calibrating budgets per format.

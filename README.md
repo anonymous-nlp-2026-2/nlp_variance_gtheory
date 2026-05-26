@@ -1,6 +1,12 @@
-# Generalizability Theory for LLM Evaluation Variance Decomposition
+# Reproducibility Budgets for Open-Weight LLM Evaluation: A Generalizability Theory Study of 7–9B Instruction-Tuned Models
 
-Code and data for applying Generalizability Theory (G-theory) to decompose variance in LLM benchmark evaluations, using Henderson Method I to estimate variance components across evaluation facets (prompt template, temperature, random seed, item ordering).
+Code and data for applying Generalizability Theory (G-theory) to decompose variance in LLM benchmark evaluations. We use Henderson Method I to estimate variance components across seven evaluation facets (prompt template, random seed, numerical precision, sampling temperature, answer ordering, model, item) in a factorial experiment crossing eight open-weight 7–9B instruction-tuned models and five benchmarks (MMLU, ARC-Challenge, HellaSwag, GSM8K, MATH; 2.3M records).
+
+**Key findings:**
+- Item difficulty is the largest variance component (34–38% in multiple-choice)
+- Model×item interaction is the second largest (30–36% in MC, 15–17% in free-form), exceeding all manipulated design factors by an order of magnitude
+- A 3-prompt × 3-seed protocol achieves G ≥ 0.80 with 178 items versus 552 under single-condition protocols (3.1× reduction)
+- Item-related variance concentrates in multiple-choice (68–72%) but disperses in free-form tasks (31–41%)
 
 ## Requirements
 
@@ -49,7 +55,7 @@ python -m src.analysis.d_study \
     --output results/d_study_results.json
 ```
 
-The D-study calculator (`src/analysis/d_study.py`) computes generalizability coefficients for alternative designs and finds minimum replications needed to reach target reliability thresholds (G >= 0.90, 0.95, 0.99).
+The D-study calculator (`src/analysis/d_study.py`) computes generalizability coefficients for alternative designs and finds minimum replications needed to reach target reliability thresholds (G ≥ 0.80, 0.90, 0.95).
 
 ## Repository Structure
 
